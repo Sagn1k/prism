@@ -1,0 +1,329 @@
+[
+  {
+    "title": "Software Engineer",
+    "slug": "software-engineer",
+    "category": "Technology",
+    "stream_fit": "science",
+    "description": "Design, develop, and maintain software applications and systems. Software engineers work across industries — from startups to FAANG companies — building products used by millions. In India, this is one of the most sought-after careers with strong growth prospects.",
+    "salary_range": {"entry_lpa": 4, "mid_lpa": 15, "senior_lpa": 40, "currency": "INR"},
+    "entry_paths": [
+      {"path": "B.Tech/B.E. in Computer Science or IT (4 years)", "duration": "4 years"},
+      {"path": "BCA + MCA", "duration": "5 years"},
+      {"path": "Self-taught + Coding Bootcamp", "duration": "1-2 years"}
+    ],
+    "required_exams": ["JEE Main", "JEE Advanced", "BITSAT", "VITEEE", "State CETs"],
+    "college_options": ["IIT Bombay", "IIT Delhi", "IIT Madras", "BITS Pilani", "NIT Trichy", "IIIT Hyderabad", "DTU Delhi", "VIT Vellore"],
+    "day_in_life": {
+      "morning": "Stand-up meeting with the team, review pull requests",
+      "midday": "Deep coding session — building new features or fixing bugs",
+      "afternoon": "Design discussions, code reviews, documentation",
+      "evening": "Testing, deployment, or learning new technologies"
+    },
+    "archetype_fit": ["the_architect", "the_builder", "the_analyst"]
+  },
+  {
+    "title": "Chartered Accountant (CA)",
+    "slug": "chartered-accountant",
+    "category": "Finance & Accounting",
+    "stream_fit": "commerce",
+    "description": "CAs are the backbone of India's financial ecosystem — handling auditing, taxation, financial advisory, and corporate governance. One of the most respected professions in India with a clear, structured path through ICAI examinations.",
+    "salary_range": {"entry_lpa": 7, "mid_lpa": 18, "senior_lpa": 50, "currency": "INR"},
+    "entry_paths": [
+      {"path": "CA Foundation (after 12th) → CA Intermediate → CA Final + 3 years articleship", "duration": "4.5-5 years"},
+      {"path": "B.Com + CA route (can start Intermediate after graduation)", "duration": "5-6 years"}
+    ],
+    "required_exams": ["CA Foundation", "CA Intermediate", "CA Final (all conducted by ICAI)"],
+    "college_options": ["ICAI (Institute of Chartered Accountants of India) — self-study or coaching", "SRCC Delhi (for B.Com)", "St. Xavier's Mumbai", "Christ University Bangalore", "Loyola College Chennai"],
+    "day_in_life": {
+      "morning": "Review financial statements and audit working papers",
+      "midday": "Client meetings, tax planning discussions",
+      "afternoon": "Statutory compliance, GST filings, advisory work",
+      "evening": "Preparing audit reports, continuing professional education"
+    },
+    "archetype_fit": ["the_analyst", "the_architect"]
+  },
+  {
+    "title": "Doctor (MBBS)",
+    "slug": "doctor-mbbs",
+    "category": "Healthcare",
+    "stream_fit": "science",
+    "description": "Doctors diagnose and treat patients, saving lives and improving health outcomes. In India, medicine remains one of the most aspirational careers. The journey is long but deeply rewarding — from MBBS to specialization through MD/MS.",
+    "salary_range": {"entry_lpa": 6, "mid_lpa": 20, "senior_lpa": 60, "currency": "INR"},
+    "entry_paths": [
+      {"path": "MBBS (5.5 years including internship)", "duration": "5.5 years"},
+      {"path": "MBBS + MD/MS (specialization)", "duration": "8.5 years"},
+      {"path": "MBBS + MD + DM/MCh (super-specialization)", "duration": "11.5 years"}
+    ],
+    "required_exams": ["NEET UG", "NEET PG", "NEET SS (for super-specialization)", "FMGE (for foreign graduates)"],
+    "college_options": ["AIIMS New Delhi", "CMC Vellore", "JIPMER Puducherry", "Maulana Azad Medical College Delhi", "Grant Medical College Mumbai", "KEM Hospital Mumbai", "AFMC Pune"],
+    "day_in_life": {
+      "morning": "Ward rounds, patient examinations, morning OPD",
+      "midday": "Surgeries or procedures (for surgical specialties), case discussions",
+      "afternoon": "OPD consultations, follow-ups, patient counselling",
+      "evening": "Medical records, research, CME sessions"
+    },
+    "archetype_fit": ["the_analyst", "the_diplomat", "the_builder"]
+  },
+  {
+    "title": "Architect",
+    "slug": "architect",
+    "category": "Design & Construction",
+    "stream_fit": "science",
+    "description": "Architects design buildings and spaces that shape how people live, work, and interact. Combining artistic vision with engineering precision, this career blends creativity with technical expertise. India's rapid urbanization makes this field increasingly important.",
+    "salary_range": {"entry_lpa": 3.5, "mid_lpa": 12, "senior_lpa": 35, "currency": "INR"},
+    "entry_paths": [
+      {"path": "B.Arch (5 years)", "duration": "5 years"},
+      {"path": "B.Arch + M.Arch (specialization)", "duration": "7 years"}
+    ],
+    "required_exams": ["NATA (National Aptitude Test in Architecture)", "JEE Main Paper 2 (B.Arch)"],
+    "college_options": ["SPA Delhi", "SPA Bhopal", "IIT Kharagpur", "IIT Roorkee", "CEPT Ahmedabad", "JJ School of Architecture Mumbai", "Chandigarh College of Architecture"],
+    "day_in_life": {
+      "morning": "Site visits, reviewing construction progress",
+      "midday": "Design development — CAD/BIM modeling, 3D visualization",
+      "afternoon": "Client presentations, coordination with engineers and contractors",
+      "evening": "Research on materials, sustainability reviews, design competitions"
+    },
+    "archetype_fit": ["the_architect", "the_innovator", "the_builder"]
+  },
+  {
+    "title": "Data Scientist",
+    "slug": "data-scientist",
+    "category": "Technology & Analytics",
+    "stream_fit": "science",
+    "description": "Data scientists extract insights from large datasets using statistics, machine learning, and programming. They help businesses make data-driven decisions. One of the fastest-growing careers globally, with strong demand in Indian tech hubs.",
+    "salary_range": {"entry_lpa": 6, "mid_lpa": 20, "senior_lpa": 45, "currency": "INR"},
+    "entry_paths": [
+      {"path": "B.Tech in CS/IT + self-study in ML/Stats", "duration": "4 years"},
+      {"path": "B.Sc Statistics/Maths + M.Sc + certifications", "duration": "5 years"},
+      {"path": "Any engineering degree + PG Diploma in Data Science", "duration": "5 years"}
+    ],
+    "required_exams": ["JEE Main/Advanced (for B.Tech)", "GATE (for M.Tech)", "ISI Admission Test"],
+    "college_options": ["IIT Madras (BS in Data Science)", "ISI Kolkata", "IISc Bangalore", "IIT Hyderabad", "IIIT Hyderabad", "CMI Chennai"],
+    "day_in_life": {
+      "morning": "Exploratory data analysis, checking model performance metrics",
+      "midday": "Feature engineering, model training and experimentation",
+      "afternoon": "Stakeholder presentations, translating insights into recommendations",
+      "evening": "Reading research papers, Kaggle competitions, upskilling"
+    },
+    "archetype_fit": ["the_analyst", "the_explorer", "the_innovator"]
+  },
+  {
+    "title": "Content Creator / Digital Media",
+    "slug": "content-creator",
+    "category": "Media & Entertainment",
+    "stream_fit": "any",
+    "description": "Content creators produce engaging digital content — videos, blogs, podcasts, social media — building audiences and brands. In India, the creator economy is booming with platforms like YouTube, Instagram, and podcasts offering real career paths.",
+    "salary_range": {"entry_lpa": 2, "mid_lpa": 10, "senior_lpa": 50, "currency": "INR"},
+    "entry_paths": [
+      {"path": "Self-taught (YouTube/Instagram/blog) + Build portfolio", "duration": "1-2 years"},
+      {"path": "B.A. in Mass Communication / Journalism", "duration": "3 years"},
+      {"path": "B.Des in Communication Design", "duration": "4 years"}
+    ],
+    "required_exams": ["CUET (for central universities)", "NID DAT (for design)", "IIMC Entrance"],
+    "college_options": ["IIMC New Delhi", "AJK MCRC Jamia Millia", "Xavier Institute of Communications Mumbai", "Symbiosis Institute of Media Pune", "NID Ahmedabad"],
+    "day_in_life": {
+      "morning": "Content planning, scripting, trend research",
+      "midday": "Shooting or recording content, editing",
+      "afternoon": "Publishing, community engagement, responding to comments",
+      "evening": "Analytics review, collaboration outreach, brand deal negotiations"
+    },
+    "archetype_fit": ["the_storyteller", "the_innovator", "the_catalyst"]
+  },
+  {
+    "title": "Lawyer",
+    "slug": "lawyer",
+    "category": "Law & Governance",
+    "stream_fit": "any",
+    "description": "Lawyers advise clients on legal matters, represent them in court, and draft legal documents. India's legal profession spans corporate law, litigation, IP law, and public interest. Top lawyers are among the highest earners in the country.",
+    "salary_range": {"entry_lpa": 5, "mid_lpa": 18, "senior_lpa": 60, "currency": "INR"},
+    "entry_paths": [
+      {"path": "5-year integrated BA LLB / BBA LLB (after 12th)", "duration": "5 years"},
+      {"path": "3-year LLB (after graduation)", "duration": "3 years"},
+      {"path": "LLB + LLM (specialization)", "duration": "6-7 years"}
+    ],
+    "required_exams": ["CLAT", "AILET", "LSAT India", "MH CET Law", "Bar Council of India enrollment"],
+    "college_options": ["NLSIU Bangalore", "NALSAR Hyderabad", "NLU Delhi", "NUJS Kolkata", "NLU Jodhpur", "Faculty of Law DU", "ILS Pune", "GLC Mumbai"],
+    "day_in_life": {
+      "morning": "Reviewing case files, legal research, preparing arguments",
+      "midday": "Court appearances, client consultations",
+      "afternoon": "Drafting contracts/petitions, team discussions on case strategy",
+      "evening": "Reading judgments, preparing for next day's hearings"
+    },
+    "archetype_fit": ["the_analyst", "the_diplomat", "the_catalyst"]
+  },
+  {
+    "title": "Civil Services (IAS/IPS/IFS)",
+    "slug": "civil-services",
+    "category": "Government & Public Policy",
+    "stream_fit": "any",
+    "description": "Civil servants administer India's governance at district, state, and national levels. The IAS, IPS, and IFS are among the most prestigious careers in India, offering the power to create large-scale societal impact.",
+    "salary_range": {"entry_lpa": 8, "mid_lpa": 16, "senior_lpa": 30, "currency": "INR"},
+    "entry_paths": [
+      {"path": "Any graduation + UPSC CSE preparation (1-3 attempts typical)", "duration": "4-6 years total"},
+      {"path": "Graduation + Optional coaching + Self-study", "duration": "4-6 years total"}
+    ],
+    "required_exams": ["UPSC Civil Services Exam (Prelims + Mains + Interview)"],
+    "college_options": ["LBSNAA Mussoorie (training academy)", "Any UGC-recognized university for graduation", "St. Stephen's Delhi", "Hindu College Delhi", "Presidency Kolkata", "Loyola Chennai"],
+    "day_in_life": {
+      "morning": "District/office meetings, reviewing files and policy briefs",
+      "midday": "Field visits, inspections, public grievance hearings",
+      "afternoon": "Inter-departmental coordination, writing policy notes",
+      "evening": "Community engagement, review of development projects"
+    },
+    "archetype_fit": ["the_catalyst", "the_diplomat", "the_architect"]
+  },
+  {
+    "title": "Product Manager",
+    "slug": "product-manager",
+    "category": "Technology & Business",
+    "stream_fit": "any",
+    "description": "Product managers define what gets built and why. They sit at the intersection of technology, business, and design, owning the product roadmap. In India's booming startup ecosystem, PMs are in high demand at companies like Flipkart, Razorpay, and Zerodha.",
+    "salary_range": {"entry_lpa": 8, "mid_lpa": 25, "senior_lpa": 55, "currency": "INR"},
+    "entry_paths": [
+      {"path": "B.Tech + 2-3 years in engineering/consulting → PM transition", "duration": "6-7 years"},
+      {"path": "MBA from top B-school", "duration": "2 years (post-grad)"},
+      {"path": "Any degree + APM programs at startups", "duration": "Varies"}
+    ],
+    "required_exams": ["CAT", "XAT", "GMAT (for international MBA)", "JEE (if B.Tech route)"],
+    "college_options": ["IIM Ahmedabad", "IIM Bangalore", "IIM Calcutta", "ISB Hyderabad", "XLRI Jamshedpur", "IIT Bombay (for B.Tech route)"],
+    "day_in_life": {
+      "morning": "Reviewing product metrics, sprint planning with engineers",
+      "midday": "User research calls, analyzing feedback and usage data",
+      "afternoon": "Writing PRDs, design reviews, stakeholder alignment",
+      "evening": "Competitive analysis, roadmap planning, industry reading"
+    },
+    "archetype_fit": ["the_catalyst", "the_builder", "the_innovator"]
+  },
+  {
+    "title": "Investment Banker",
+    "slug": "investment-banker",
+    "category": "Finance",
+    "stream_fit": "commerce",
+    "description": "Investment bankers advise companies on mergers, acquisitions, IPOs, and capital raising. It is one of the highest-paying careers with intense work demands. India's growing capital markets make this field increasingly relevant.",
+    "salary_range": {"entry_lpa": 10, "mid_lpa": 30, "senior_lpa": 80, "currency": "INR"},
+    "entry_paths": [
+      {"path": "B.Com/BBA + MBA (Finance) from top B-school", "duration": "5-6 years"},
+      {"path": "B.Tech + MBA", "duration": "6 years"},
+      {"path": "CA + CFA + work experience", "duration": "6-7 years"}
+    ],
+    "required_exams": ["CAT", "XAT", "GMAT", "CFA (optional but valued)", "CA (alternative route)"],
+    "college_options": ["IIM Ahmedabad", "IIM Bangalore", "IIM Calcutta", "ISB Hyderabad", "JBIMS Mumbai", "MDI Gurgaon", "FMS Delhi"],
+    "day_in_life": {
+      "morning": "Market analysis, reviewing deal pipelines",
+      "midday": "Financial modeling, valuation analysis, pitch book preparation",
+      "afternoon": "Client meetings, due diligence reviews",
+      "evening": "Late-night deal execution, documentation, presentations"
+    },
+    "archetype_fit": ["the_analyst", "the_catalyst", "the_architect"]
+  },
+  {
+    "title": "UX/UI Designer",
+    "slug": "ux-ui-designer",
+    "category": "Design & Technology",
+    "stream_fit": "any",
+    "description": "UX/UI designers create intuitive, beautiful digital experiences. They research user needs, design interfaces, and prototype solutions. With India's tech boom, design has become a high-demand, well-paying creative career.",
+    "salary_range": {"entry_lpa": 4, "mid_lpa": 15, "senior_lpa": 35, "currency": "INR"},
+    "entry_paths": [
+      {"path": "B.Des in Interaction/Communication Design", "duration": "4 years"},
+      {"path": "Any degree + UX bootcamp/certifications + portfolio", "duration": "1-2 years"},
+      {"path": "B.Tech + self-taught design transition", "duration": "4-5 years"}
+    ],
+    "required_exams": ["NID DAT", "UCEED", "CEED (for M.Des)", "NIFT Entrance"],
+    "college_options": ["NID Ahmedabad", "IDC IIT Bombay", "Srishti Bangalore", "MIT Institute of Design Pune", "DJ Academy of Design Coimbatore"],
+    "day_in_life": {
+      "morning": "User research review, design system updates",
+      "midday": "Wireframing and prototyping in Figma, design critiques",
+      "afternoon": "Usability testing sessions, developer handoff meetings",
+      "evening": "Exploring design inspiration, Dribbble/Behance, personal projects"
+    },
+    "archetype_fit": ["the_storyteller", "the_builder", "the_innovator"]
+  },
+  {
+    "title": "Mechanical Engineer",
+    "slug": "mechanical-engineer",
+    "category": "Engineering & Manufacturing",
+    "stream_fit": "science",
+    "description": "Mechanical engineers design, analyze, and manufacture mechanical systems — from automobiles to HVAC to robotics. India's manufacturing push (Make in India) and EV revolution make this a field with strong long-term prospects.",
+    "salary_range": {"entry_lpa": 4, "mid_lpa": 12, "senior_lpa": 30, "currency": "INR"},
+    "entry_paths": [
+      {"path": "B.Tech/B.E. in Mechanical Engineering", "duration": "4 years"},
+      {"path": "B.Tech + M.Tech (specialization in robotics, thermal, etc.)", "duration": "6 years"},
+      {"path": "Diploma + B.Tech (lateral entry)", "duration": "5-6 years"}
+    ],
+    "required_exams": ["JEE Main", "JEE Advanced", "GATE (for M.Tech/PSU jobs)", "State CETs"],
+    "college_options": ["IIT Bombay", "IIT Kharagpur", "IIT Kanpur", "NIT Trichy", "NIT Warangal", "BITS Pilani", "CoEP Pune"],
+    "day_in_life": {
+      "morning": "CAD modeling, reviewing engineering drawings",
+      "midday": "Prototype testing, manufacturing floor visits",
+      "afternoon": "Cross-functional meetings with production and quality teams",
+      "evening": "Simulation analysis (FEA/CFD), project documentation"
+    },
+    "archetype_fit": ["the_builder", "the_architect", "the_analyst"]
+  },
+  {
+    "title": "Clinical Psychologist",
+    "slug": "clinical-psychologist",
+    "category": "Healthcare & Wellbeing",
+    "stream_fit": "any",
+    "description": "Clinical psychologists assess and treat mental health conditions using therapeutic techniques. With India's growing awareness of mental health, this career is gaining recognition and demand. They work in hospitals, clinics, schools, and private practice.",
+    "salary_range": {"entry_lpa": 3, "mid_lpa": 10, "senior_lpa": 25, "currency": "INR"},
+    "entry_paths": [
+      {"path": "B.A./B.Sc Psychology + M.A./M.Sc Clinical Psychology + RCI registration", "duration": "5-6 years"},
+      {"path": "B.A. Psychology + M.Phil Clinical Psychology (RCI recognized)", "duration": "5 years"},
+      {"path": "Integrated 5-year program in Psychology", "duration": "5 years"}
+    ],
+    "required_exams": ["CUET (for central universities)", "RCI Registration (mandatory for practice)", "NIMHANS Entrance", "TISS Entrance"],
+    "college_options": ["NIMHANS Bangalore", "TISS Mumbai", "Delhi University", "Amity University", "Christ University Bangalore", "Jamia Millia Islamia"],
+    "day_in_life": {
+      "morning": "Patient assessments, psychometric testing",
+      "midday": "Individual therapy sessions (CBT, psychodynamic, etc.)",
+      "afternoon": "Group therapy, family counselling sessions",
+      "evening": "Case notes documentation, supervision, research"
+    },
+    "archetype_fit": ["the_diplomat", "the_analyst", "the_storyteller"]
+  },
+  {
+    "title": "Entrepreneur / Startup Founder",
+    "slug": "entrepreneur",
+    "category": "Business & Startups",
+    "stream_fit": "any",
+    "description": "Entrepreneurs identify opportunities and build businesses from the ground up. India's startup ecosystem is the third-largest globally, with unicorns across fintech, edtech, healthtech, and D2C. No fixed path — passion, resilience, and execution matter most.",
+    "salary_range": {"entry_lpa": 0, "mid_lpa": 15, "senior_lpa": 100, "currency": "INR"},
+    "entry_paths": [
+      {"path": "Start while in college — build, fail, learn", "duration": "Ongoing"},
+      {"path": "Work 3-5 years in industry → identify gap → start up", "duration": "3-5 years prep"},
+      {"path": "MBA + incubator/accelerator program", "duration": "2-3 years"}
+    ],
+    "required_exams": ["None required — but CAT/GMAT help for MBA route", "Startup India registration"],
+    "college_options": ["IIM Ahmedabad (CIIE incubator)", "IIT Bombay (SINE incubator)", "ISB Hyderabad (DLabs)", "NSRCEL IIM Bangalore", "T-Hub Hyderabad", "Any college — start building!"],
+    "day_in_life": {
+      "morning": "Reviewing metrics, team stand-up, investor updates",
+      "midday": "Product development, customer calls, sales pitches",
+      "afternoon": "Fundraising meetings, partnership discussions, hiring",
+      "evening": "Strategic planning, networking events, reading and learning"
+    },
+    "archetype_fit": ["the_catalyst", "the_innovator", "the_builder"]
+  },
+  {
+    "title": "Environmental Scientist",
+    "slug": "environmental-scientist",
+    "category": "Science & Sustainability",
+    "stream_fit": "science",
+    "description": "Environmental scientists study ecosystems, pollution, and climate change to develop solutions for sustainability. With India facing acute environmental challenges — air pollution, water scarcity, waste management — this career has growing national importance.",
+    "salary_range": {"entry_lpa": 3.5, "mid_lpa": 10, "senior_lpa": 25, "currency": "INR"},
+    "entry_paths": [
+      {"path": "B.Sc Environmental Science + M.Sc + research", "duration": "5 years"},
+      {"path": "B.Tech Environmental Engineering", "duration": "4 years"},
+      {"path": "B.Sc Biology/Chemistry + M.Sc Environmental Science", "duration": "5 years"}
+    ],
+    "required_exams": ["CUET", "IIT JAM (for M.Sc at IITs)", "GATE (for M.Tech)", "NET/JRF (for research)"],
+    "college_options": ["JNU New Delhi", "IISc Bangalore", "IIT Bombay (ESED)", "IIT Kharagpur", "TERI School of Advanced Studies", "FRI Dehradun", "Wildlife Institute of India"],
+    "day_in_life": {
+      "morning": "Field sampling — water, air, or soil quality testing",
+      "midday": "Laboratory analysis, data processing",
+      "afternoon": "Report writing, environmental impact assessment reviews",
+      "evening": "Policy research, grant writing, community awareness programs"
+    },
+    "archetype_fit": ["the_explorer", "the_analyst", "the_diplomat"]
+  }
+]

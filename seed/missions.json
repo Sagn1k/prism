@@ -1,0 +1,475 @@
+[
+  {
+    "world_slug": "space-lab",
+    "title": "Asteroid Classification Sprint",
+    "type": "flash",
+    "difficulty": "easy",
+    "duration_seconds": 120,
+    "sort_order": 1,
+    "content_payload": {
+      "instructions": "You are a junior researcher on the Space Lab. A batch of 10 asteroid samples has arrived. Classify each asteroid based on its mineral composition, size, and orbit type. Work fast — the analysis window closes in 2 minutes!",
+      "items": [
+        {"id": "a1", "mineral": "iron-nickel", "size_km": 0.5, "orbit": "near-earth"},
+        {"id": "a2", "mineral": "carbonaceous", "size_km": 2.1, "orbit": "main-belt"},
+        {"id": "a3", "mineral": "silicate", "size_km": 0.8, "orbit": "near-earth"},
+        {"id": "a4", "mineral": "iron-nickel", "size_km": 15.3, "orbit": "trojan"},
+        {"id": "a5", "mineral": "carbonaceous", "size_km": 0.3, "orbit": "near-earth"},
+        {"id": "a6", "mineral": "silicate", "size_km": 4.7, "orbit": "main-belt"},
+        {"id": "a7", "mineral": "iron-nickel", "size_km": 1.2, "orbit": "main-belt"},
+        {"id": "a8", "mineral": "carbonaceous", "size_km": 9.0, "orbit": "trojan"},
+        {"id": "a9", "mineral": "silicate", "size_km": 0.1, "orbit": "near-earth"},
+        {"id": "a10", "mineral": "iron-nickel", "size_km": 3.4, "orbit": "main-belt"}
+      ],
+      "categories": ["M-type (metallic)", "C-type (carbon-rich)", "S-type (siliceous)"]
+    },
+    "scoring_rubric": {
+      "accuracy": {"weight": 0.6, "description": "Correct classification of each asteroid"},
+      "speed": {"weight": 0.3, "description": "Time taken to complete all classifications"},
+      "consistency": {"weight": 0.1, "description": "Logical consistency in reasoning"}
+    },
+    "trait_weights": {
+      "analytical_creative": 0.7,
+      "builder_explorer": -0.3,
+      "leader_specialist": -0.1,
+      "entrepreneur_steward": 0.0,
+      "people_systems": 0.5
+    }
+  },
+  {
+    "world_slug": "space-lab",
+    "title": "Mars Colony Resource Dilemma",
+    "type": "scenario_sim",
+    "difficulty": "medium",
+    "duration_seconds": 300,
+    "sort_order": 2,
+    "content_payload": {
+      "scenario": "You are the resource manager for a Mars colony of 200 settlers. A dust storm has damaged 40% of your solar panels and a supply ship is 45 days away. You must decide how to allocate remaining power across life support, food production, communications, and research.",
+      "resources": {
+        "power_available_kwh": 600,
+        "life_support_min_kwh": 300,
+        "food_production_min_kwh": 150,
+        "comms_min_kwh": 50,
+        "research_min_kwh": 0
+      },
+      "decisions": [
+        {"id": "d1", "question": "How much power do you allocate to life support?", "type": "slider", "min": 300, "max": 600},
+        {"id": "d2", "question": "Do you ration food production or maintain current levels?", "type": "choice", "options": ["Ration to 50%", "Maintain at minimum", "Boost to find alternatives"]},
+        {"id": "d3", "question": "A researcher says she can repair panels if given 100 kWh for her lab. Do you approve?", "type": "choice", "options": ["Approve fully", "Give 50 kWh", "Deny — survival first"]},
+        {"id": "d4", "question": "Settlers are panicking. How do you communicate the situation?", "type": "open_text"}
+      ]
+    },
+    "scoring_rubric": {
+      "resource_optimization": {"weight": 0.3, "description": "Efficient allocation of limited power"},
+      "risk_assessment": {"weight": 0.25, "description": "Balanced approach to survival vs. recovery"},
+      "communication": {"weight": 0.25, "description": "Quality of settler communication plan"},
+      "creativity": {"weight": 0.2, "description": "Novel solutions or approaches"}
+    },
+    "trait_weights": {
+      "analytical_creative": 0.3,
+      "builder_explorer": -0.2,
+      "leader_specialist": 0.5,
+      "entrepreneur_steward": 0.2,
+      "people_systems": 0.3
+    }
+  },
+  {
+    "world_slug": "space-lab",
+    "title": "Design a Space Habitat",
+    "type": "build_quest",
+    "difficulty": "hard",
+    "duration_seconds": 600,
+    "sort_order": 3,
+    "content_payload": {
+      "brief": "Design a self-sustaining space habitat for 50 people orbiting Jupiter's moon Europa. Your design must address: gravity simulation, energy source, food systems, psychological wellbeing, and emergency protocols.",
+      "deliverables": [
+        {"id": "del1", "label": "Habitat Layout", "type": "diagram_or_text", "description": "Describe or sketch the physical layout of your habitat"},
+        {"id": "del2", "label": "Energy Plan", "type": "text", "description": "How will you generate and store energy?"},
+        {"id": "del3", "label": "Food & Water", "type": "text", "description": "Describe your food production and water recycling systems"},
+        {"id": "del4", "label": "Crew Wellbeing", "type": "text", "description": "How will you maintain morale and mental health?"},
+        {"id": "del5", "label": "Emergency Protocol", "type": "text", "description": "What happens if a critical system fails?"}
+      ],
+      "constraints": ["Budget: 500 credits", "Max structure weight: 10,000 tonnes", "Must survive 5-year mission without resupply"]
+    },
+    "scoring_rubric": {
+      "completeness": {"weight": 0.2, "description": "All deliverables addressed"},
+      "feasibility": {"weight": 0.25, "description": "Scientifically plausible design"},
+      "creativity": {"weight": 0.25, "description": "Original and innovative solutions"},
+      "systems_thinking": {"weight": 0.2, "description": "How well subsystems integrate"},
+      "presentation": {"weight": 0.1, "description": "Clarity and quality of explanation"}
+    },
+    "trait_weights": {
+      "analytical_creative": -0.2,
+      "builder_explorer": 0.5,
+      "leader_specialist": 0.1,
+      "entrepreneur_steward": 0.1,
+      "people_systems": 0.4
+    }
+  },
+  {
+    "world_slug": "creator-studio",
+    "title": "Brand Identity Blitz",
+    "type": "flash",
+    "difficulty": "easy",
+    "duration_seconds": 90,
+    "sort_order": 1,
+    "content_payload": {
+      "instructions": "A new Indian snack brand called 'Crunchify' needs a brand identity in 90 seconds! Pick the best combination of colors, tagline, and target audience.",
+      "questions": [
+        {"id": "q1", "question": "Pick the primary brand color", "options": ["Turmeric Yellow", "Masala Red", "Mint Green", "Royal Purple"]},
+        {"id": "q2", "question": "Choose the tagline", "options": ["Crunch Karo, Munch Karo!", "Taste the Twist", "Snack Smarter", "Crunchify Your Day"]},
+        {"id": "q3", "question": "Primary target audience", "options": ["College students (18-24)", "School kids (8-14)", "Working professionals (25-35)", "Families"]},
+        {"id": "q4", "question": "What should the mascot be?", "type": "open_text"}
+      ]
+    },
+    "scoring_rubric": {
+      "brand_coherence": {"weight": 0.4, "description": "How well choices work together as a brand"},
+      "market_awareness": {"weight": 0.3, "description": "Understanding of Indian snack market"},
+      "creativity": {"weight": 0.3, "description": "Originality of mascot and reasoning"}
+    },
+    "trait_weights": {
+      "analytical_creative": -0.5,
+      "builder_explorer": 0.1,
+      "leader_specialist": 0.2,
+      "entrepreneur_steward": 0.4,
+      "people_systems": -0.3
+    }
+  },
+  {
+    "world_slug": "creator-studio",
+    "title": "Short Film Story Arc",
+    "type": "scenario_sim",
+    "difficulty": "medium",
+    "duration_seconds": 420,
+    "sort_order": 2,
+    "content_payload": {
+      "scenario": "You are a film director at a Mumbai production house. You have been given a 3-minute short film slot at a prestigious festival. The theme is 'Unseen India'. Craft your story arc.",
+      "steps": [
+        {"id": "s1", "label": "Concept", "prompt": "What is your film about? Describe the core idea in 2-3 sentences."},
+        {"id": "s2", "label": "Characters", "prompt": "Describe your main character(s). What makes them compelling?"},
+        {"id": "s3", "label": "Story Beats", "prompt": "Outline 5 key story beats (opening, inciting incident, rising action, climax, resolution)."},
+        {"id": "s4", "label": "Visual Style", "prompt": "What visual style will you use? (e.g., handheld documentary, cinematic wide shots, animation)"},
+        {"id": "s5", "label": "Impact", "prompt": "What do you want the audience to feel after watching?"}
+      ]
+    },
+    "scoring_rubric": {
+      "originality": {"weight": 0.3, "description": "Fresh take on the theme"},
+      "narrative_structure": {"weight": 0.25, "description": "Well-crafted story arc"},
+      "emotional_depth": {"weight": 0.25, "description": "Character depth and emotional resonance"},
+      "visual_thinking": {"weight": 0.2, "description": "Cinematic and visual awareness"}
+    },
+    "trait_weights": {
+      "analytical_creative": -0.6,
+      "builder_explorer": -0.1,
+      "leader_specialist": 0.3,
+      "entrepreneur_steward": 0.0,
+      "people_systems": -0.4
+    }
+  },
+  {
+    "world_slug": "creator-studio",
+    "title": "Design a School App Feature",
+    "type": "build_quest",
+    "difficulty": "hard",
+    "duration_seconds": 500,
+    "sort_order": 3,
+    "content_payload": {
+      "brief": "Your school wants to add a new feature to its student app. Design a feature that solves a real problem students face daily. Create wireframes (described in text), user flow, and a pitch.",
+      "deliverables": [
+        {"id": "del1", "label": "Problem Statement", "type": "text", "description": "What specific student problem does this solve?"},
+        {"id": "del2", "label": "Feature Description", "type": "text", "description": "Describe the feature and how it works"},
+        {"id": "del3", "label": "User Flow", "type": "text", "description": "Step-by-step user journey through the feature"},
+        {"id": "del4", "label": "Wireframe Description", "type": "text", "description": "Describe 3 key screens of your feature"},
+        {"id": "del5", "label": "Pitch", "type": "text", "description": "30-second pitch to the school principal"}
+      ]
+    },
+    "scoring_rubric": {
+      "problem_clarity": {"weight": 0.2, "description": "Clear, real problem identification"},
+      "solution_quality": {"weight": 0.3, "description": "Practical and elegant solution"},
+      "user_empathy": {"weight": 0.2, "description": "Understanding of student needs"},
+      "communication": {"weight": 0.15, "description": "Quality of pitch and descriptions"},
+      "feasibility": {"weight": 0.15, "description": "Can this actually be built?"}
+    },
+    "trait_weights": {
+      "analytical_creative": -0.3,
+      "builder_explorer": 0.4,
+      "leader_specialist": 0.2,
+      "entrepreneur_steward": 0.3,
+      "people_systems": -0.2
+    }
+  },
+  {
+    "world_slug": "code-dungeon",
+    "title": "Pattern Lock Breaker",
+    "type": "flash",
+    "difficulty": "easy",
+    "duration_seconds": 90,
+    "sort_order": 1,
+    "content_payload": {
+      "instructions": "Crack 5 pattern locks to advance through the dungeon. Each lock shows a number sequence — find the rule and predict the next number.",
+      "puzzles": [
+        {"id": "p1", "sequence": [2, 6, 18, 54], "answer": 162, "rule": "multiply by 3"},
+        {"id": "p2", "sequence": [1, 1, 2, 3, 5, 8], "answer": 13, "rule": "Fibonacci"},
+        {"id": "p3", "sequence": [100, 95, 85, 70, 50], "answer": 25, "rule": "subtract 5, 10, 15, 20, 25"},
+        {"id": "p4", "sequence": [3, 9, 27, 81], "answer": 243, "rule": "powers of 3"},
+        {"id": "p5", "sequence": [1, 4, 9, 16, 25], "answer": 36, "rule": "perfect squares"}
+      ]
+    },
+    "scoring_rubric": {
+      "accuracy": {"weight": 0.7, "description": "Correct answers"},
+      "speed": {"weight": 0.3, "description": "Time to solve all puzzles"}
+    },
+    "trait_weights": {
+      "analytical_creative": 0.8,
+      "builder_explorer": 0.0,
+      "leader_specialist": -0.2,
+      "entrepreneur_steward": 0.0,
+      "people_systems": 0.6
+    }
+  },
+  {
+    "world_slug": "code-dungeon",
+    "title": "Database Detective",
+    "type": "scenario_sim",
+    "difficulty": "medium",
+    "duration_seconds": 360,
+    "sort_order": 2,
+    "content_payload": {
+      "scenario": "The school's student database has been corrupted! As the IT detective, you must analyze the clues, find inconsistencies, and restore the correct data. You have access to 4 data tables with deliberate errors.",
+      "tables": {
+        "students": [
+          {"id": 1, "name": "Aarav Sharma", "class": "10A", "roll_no": 1},
+          {"id": 2, "name": "Priya Patel", "class": "10A", "roll_no": 1},
+          {"id": 3, "name": "Rohan Gupta", "class": "10B", "roll_no": 15},
+          {"id": 4, "name": "Sneha Reddy", "class": "11A", "roll_no": -3}
+        ],
+        "marks": [
+          {"student_id": 1, "subject": "Maths", "score": 95},
+          {"student_id": 1, "subject": "Maths", "score": 87},
+          {"student_id": 5, "subject": "Science", "score": 76},
+          {"student_id": 3, "subject": "English", "score": 150}
+        ]
+      },
+      "questions": [
+        {"id": "q1", "question": "List all data integrity issues you can find.", "type": "open_text"},
+        {"id": "q2", "question": "Which issues are most critical to fix first and why?", "type": "open_text"},
+        {"id": "q3", "question": "How would you prevent these issues in the future?", "type": "open_text"}
+      ]
+    },
+    "scoring_rubric": {
+      "issue_detection": {"weight": 0.4, "description": "Number of issues correctly identified"},
+      "prioritization": {"weight": 0.3, "description": "Logical prioritization of fixes"},
+      "prevention": {"weight": 0.3, "description": "Quality of preventive measures proposed"}
+    },
+    "trait_weights": {
+      "analytical_creative": 0.6,
+      "builder_explorer": 0.1,
+      "leader_specialist": 0.0,
+      "entrepreneur_steward": -0.1,
+      "people_systems": 0.7
+    }
+  },
+  {
+    "world_slug": "code-dungeon",
+    "title": "Algorithm Arena",
+    "type": "build_quest",
+    "difficulty": "hard",
+    "duration_seconds": 480,
+    "sort_order": 3,
+    "content_payload": {
+      "brief": "Design an algorithm (in pseudocode or plain English) to solve a real-world scheduling problem: your school has 30 teachers, 20 classrooms, and 8 periods per day. Create a timetable that minimizes conflicts.",
+      "constraints": [
+        "No teacher can be in two rooms at once",
+        "No classroom can hold two classes at once",
+        "Each class must have all required subjects per week",
+        "Teachers have a maximum of 6 periods per day",
+        "At least 1 free period per teacher per day"
+      ],
+      "deliverables": [
+        {"id": "del1", "label": "Approach", "type": "text", "description": "Describe your algorithm strategy"},
+        {"id": "del2", "label": "Pseudocode", "type": "text", "description": "Write step-by-step pseudocode"},
+        {"id": "del3", "label": "Edge Cases", "type": "text", "description": "What edge cases did you consider?"},
+        {"id": "del4", "label": "Optimization", "type": "text", "description": "How would you optimize this further?"}
+      ]
+    },
+    "scoring_rubric": {
+      "correctness": {"weight": 0.3, "description": "Algorithm produces valid timetable"},
+      "efficiency": {"weight": 0.25, "description": "Computational efficiency of approach"},
+      "completeness": {"weight": 0.25, "description": "All constraints addressed"},
+      "clarity": {"weight": 0.2, "description": "Pseudocode readability"}
+    },
+    "trait_weights": {
+      "analytical_creative": 0.5,
+      "builder_explorer": 0.3,
+      "leader_specialist": -0.1,
+      "entrepreneur_steward": 0.0,
+      "people_systems": 0.7
+    }
+  },
+  {
+    "world_slug": "market-arena",
+    "title": "Shark Tank Snap Pitch",
+    "type": "flash",
+    "difficulty": "easy",
+    "duration_seconds": 120,
+    "sort_order": 1,
+    "content_payload": {
+      "instructions": "You have 2 minutes to create a snap pitch for a startup idea. Pick a problem, name your startup, define your target customer, and state how you will make money.",
+      "prompts": [
+        {"id": "p1", "label": "Problem", "prompt": "What everyday problem in India are you solving?", "type": "open_text"},
+        {"id": "p2", "label": "Startup Name", "prompt": "What is your startup called?", "type": "open_text"},
+        {"id": "p3", "label": "Target Customer", "prompt": "Who is your ideal customer? Be specific.", "type": "open_text"},
+        {"id": "p4", "label": "Revenue Model", "prompt": "How will you make money?", "options": ["Subscription", "Commission/Marketplace", "Advertising", "Freemium", "Direct Sales"]},
+        {"id": "p5", "label": "One-liner Pitch", "prompt": "Pitch your startup in one sentence.", "type": "open_text"}
+      ]
+    },
+    "scoring_rubric": {
+      "problem_validity": {"weight": 0.25, "description": "Is this a real, significant problem?"},
+      "market_understanding": {"weight": 0.25, "description": "Clarity on target customer"},
+      "business_viability": {"weight": 0.25, "description": "Revenue model makes sense"},
+      "communication": {"weight": 0.25, "description": "Compelling one-liner pitch"}
+    },
+    "trait_weights": {
+      "analytical_creative": -0.2,
+      "builder_explorer": 0.2,
+      "leader_specialist": 0.4,
+      "entrepreneur_steward": 0.7,
+      "people_systems": -0.3
+    }
+  },
+  {
+    "world_slug": "market-arena",
+    "title": "Negotiate the Deal",
+    "type": "scenario_sim",
+    "difficulty": "medium",
+    "duration_seconds": 360,
+    "sort_order": 2,
+    "content_payload": {
+      "scenario": "You run a small chai brand called 'Chai-Wala Premium'. A large retail chain (MegaMart) wants to stock your chai but is driving a hard bargain. Navigate the negotiation to get the best deal while keeping the relationship intact.",
+      "rounds": [
+        {
+          "id": "r1",
+          "situation": "MegaMart offers Rs 80 per unit. Your cost is Rs 65 and you usually sell at Rs 120. They want exclusive rights in their stores.",
+          "question": "What is your counter-offer?",
+          "type": "open_text"
+        },
+        {
+          "id": "r2",
+          "situation": "MegaMart says they can guarantee 10,000 units/month but want 90-day payment terms. Your cash flow needs 30-day terms.",
+          "question": "How do you respond?",
+          "options": ["Accept 90-day terms for the volume", "Insist on 30-day terms", "Propose 45-day compromise with volume commitment", "Walk away"]
+        },
+        {
+          "id": "r3",
+          "situation": "MegaMart's competitor, QuickBasket, calls you offering Rs 95/unit but only 3,000 units/month with 30-day terms.",
+          "question": "What do you do?",
+          "type": "open_text"
+        },
+        {
+          "id": "r4",
+          "situation": "MegaMart finds out about QuickBasket and threatens to end negotiations.",
+          "question": "How do you handle this?",
+          "type": "open_text"
+        }
+      ]
+    },
+    "scoring_rubric": {
+      "negotiation_skill": {"weight": 0.3, "description": "Quality of counter-offers and strategy"},
+      "business_acumen": {"weight": 0.25, "description": "Financial reasoning and deal structure"},
+      "relationship_management": {"weight": 0.25, "description": "Maintaining professional relationships"},
+      "strategic_thinking": {"weight": 0.2, "description": "Long-term thinking and leverage use"}
+    },
+    "trait_weights": {
+      "analytical_creative": 0.1,
+      "builder_explorer": 0.0,
+      "leader_specialist": 0.4,
+      "entrepreneur_steward": 0.6,
+      "people_systems": -0.2
+    }
+  },
+  {
+    "world_slug": "market-arena",
+    "title": "Build a Business Plan",
+    "type": "build_quest",
+    "difficulty": "hard",
+    "duration_seconds": 600,
+    "sort_order": 3,
+    "content_payload": {
+      "brief": "Create a one-page business plan for a student-run venture that can operate from your school campus. The venture must be legal, low-cost to start (under Rs 5,000), and solve a real need.",
+      "deliverables": [
+        {"id": "del1", "label": "Business Idea", "type": "text", "description": "What is your venture and what problem does it solve?"},
+        {"id": "del2", "label": "Customer Analysis", "type": "text", "description": "Who will buy this? How many potential customers in your school?"},
+        {"id": "del3", "label": "Cost Breakdown", "type": "text", "description": "Itemize your startup costs (must stay under Rs 5,000)"},
+        {"id": "del4", "label": "Revenue Projection", "type": "text", "description": "How much will you charge? Project first month revenue."},
+        {"id": "del5", "label": "Growth Plan", "type": "text", "description": "How will you scale this beyond your school?"},
+        {"id": "del6", "label": "Risk Assessment", "type": "text", "description": "What could go wrong and how will you handle it?"}
+      ]
+    },
+    "scoring_rubric": {
+      "viability": {"weight": 0.25, "description": "Can this actually work?"},
+      "financial_logic": {"weight": 0.2, "description": "Numbers make sense"},
+      "market_understanding": {"weight": 0.2, "description": "Understands customer needs"},
+      "scalability": {"weight": 0.15, "description": "Growth potential beyond school"},
+      "risk_awareness": {"weight": 0.1, "description": "Realistic about challenges"},
+      "presentation": {"weight": 0.1, "description": "Clear and professional"}
+    },
+    "trait_weights": {
+      "analytical_creative": 0.0,
+      "builder_explorer": 0.3,
+      "leader_specialist": 0.3,
+      "entrepreneur_steward": 0.7,
+      "people_systems": -0.1
+    }
+  },
+  {
+    "world_slug": "space-lab",
+    "title": "Cosmic Choices",
+    "type": "this_or_that",
+    "difficulty": "easy",
+    "duration_seconds": 60,
+    "sort_order": 4,
+    "content_payload": {
+      "instructions": "Quick-fire choices! Pick the option that resonates with you more. There are no wrong answers.",
+      "pairs": [
+        {"id": "c1", "option_a": "Map a new galaxy", "option_b": "Optimize a rocket engine"},
+        {"id": "c2", "option_a": "Lead a space crew", "option_b": "Run experiments solo"},
+        {"id": "c3", "option_a": "Build a Mars base", "option_b": "Discover alien life"}
+      ]
+    },
+    "scoring_rubric": {
+      "completion": {"weight": 1.0, "description": "All choices made"}
+    },
+    "trait_weights": {
+      "analytical_creative": 0.0,
+      "builder_explorer": 0.0,
+      "leader_specialist": 0.0,
+      "entrepreneur_steward": 0.0,
+      "people_systems": 0.0
+    }
+  },
+  {
+    "world_slug": "market-arena",
+    "title": "Business Instincts",
+    "type": "this_or_that",
+    "difficulty": "easy",
+    "duration_seconds": 60,
+    "sort_order": 4,
+    "content_payload": {
+      "instructions": "Trust your gut! Pick the option that feels more 'you'. No right or wrong answers.",
+      "pairs": [
+        {"id": "c1", "option_a": "Start a company", "option_b": "Join a top MNC"},
+        {"id": "c2", "option_a": "Take a big risk for big reward", "option_b": "Play it safe and steady"},
+        {"id": "c3", "option_a": "Sell a product", "option_b": "Sell an idea"}
+      ]
+    },
+    "scoring_rubric": {
+      "completion": {"weight": 1.0, "description": "All choices made"}
+    },
+    "trait_weights": {
+      "analytical_creative": 0.0,
+      "builder_explorer": 0.0,
+      "leader_specialist": 0.0,
+      "entrepreneur_steward": 0.0,
+      "people_systems": 0.0
+    }
+  }
+]

@@ -1,0 +1,34 @@
+[
+  {
+    "name": "Space Lab",
+    "slug": "space-lab",
+    "color_hex": "#00E5FF",
+    "description": "A zero-gravity research station orbiting Earth. Here, you investigate cosmic mysteries, run experiments, and explore the unknown frontiers of science and discovery.",
+    "icon_url": null,
+    "sort_order": 1
+  },
+  {
+    "name": "Creator Studio",
+    "slug": "creator-studio",
+    "color_hex": "#FF00FF",
+    "description": "A vibrant digital workshop buzzing with creative energy. Design, build, and remix ideas across art, music, writing, and media. This is where imagination becomes reality.",
+    "icon_url": null,
+    "sort_order": 2
+  },
+  {
+    "name": "Code Dungeon",
+    "slug": "code-dungeon",
+    "color_hex": "#7C4DFF",
+    "description": "A labyrinth of logic puzzles and algorithmic challenges deep underground. Crack codes, debug traps, and sharpen your analytical mind to navigate through each level.",
+    "icon_url": null,
+    "sort_order": 3
+  },
+  {
+    "name": "Market Arena",
+    "slug": "market-arena",
+    "color_hex": "#FFB300",
+    "description": "A bustling marketplace where you pitch ideas, negotiate deals, and build ventures from scratch. Test your entrepreneurial instincts and learn the art of creating value.",
+    "icon_url": null,
+    "sort_order": 4
+  }
+]

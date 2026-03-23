@@ -1,0 +1,87 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-prism-bg text-prism-text antialiased;
+  }
+
+  ::-webkit-scrollbar {
+    width: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    @apply bg-prism-bg;
+  }
+  ::-webkit-scrollbar-thumb {
+    @apply bg-prism-violet/20 rounded-full;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply inline-flex items-center justify-center px-6 py-3 rounded-2xl
+           font-bold text-white bg-prism-gradient
+           hover:shadow-glow active:scale-95 transition-all duration-200
+           shadow-md;
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center justify-center px-6 py-3 rounded-2xl
+           font-bold text-prism-violet border-2 border-prism-violet/30
+           hover:bg-prism-violet/5 active:scale-95 transition-all duration-200;
+  }
+
+  .card {
+    @apply bg-prism-surface border border-prism-border
+           rounded-2xl shadow-card transition-shadow duration-200;
+  }
+
+  .card-interactive {
+    @apply card hover:shadow-card-hover hover:border-prism-violet/20
+           cursor-pointer active:scale-[0.98] transition-all duration-200;
+  }
+
+  .text-gradient {
+    @apply bg-prism-gradient bg-clip-text text-transparent;
+  }
+
+  .badge {
+    @apply inline-flex items-center gap-1 px-2.5 py-1 rounded-full text-xs font-bold;
+  }
+
+  .badge-xp {
+    @apply badge bg-amber-50 text-amber-600 border border-amber-200;
+  }
+
+  .badge-level {
+    @apply badge bg-violet-50 text-prism-violet border border-violet-200;
+  }
+
+  .badge-easy {
+    @apply badge bg-emerald-50 text-emerald-600;
+  }
+
+  .badge-medium {
+    @apply badge bg-amber-50 text-amber-600;
+  }
+
+  .badge-hard {
+    @apply badge bg-red-50 text-red-600;
+  }
+
+  .input-field {
+    @apply w-full bg-prism-surface border-2 border-prism-border rounded-2xl px-4 py-3
+           text-sm text-prism-text placeholder:text-prism-text-muted
+           focus:outline-none focus:border-prism-violet/50 focus:ring-2 focus:ring-prism-violet/10
+           transition-all;
+  }
+
+  .progress-bar {
+    @apply h-3 bg-prism-surface-alt rounded-full overflow-hidden border border-prism-border/50;
+  }
+
+  .progress-fill {
+    @apply h-full rounded-full transition-all duration-700 ease-out;
+  }
+}

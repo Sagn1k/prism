@@ -1,0 +1,154 @@
+[
+  {
+    "name": "the_architect",
+    "label": "The Architect",
+    "description": "Methodical planners who love designing systems and structures. They see the world as interconnected blueprints waiting to be optimized. Architects thrive when they can break complex problems into elegant, well-ordered solutions.",
+    "emoji_icon": "\ud83c\udfd7\ufe0f",
+    "trait_ranges": {
+      "analytical_creative": [0.6, 1.0],
+      "builder_explorer": [0.5, 0.9],
+      "leader_specialist": [0.3, 0.7],
+      "entrepreneur_steward": [0.2, 0.6],
+      "people_systems": [0.6, 1.0]
+    },
+    "color_weights": {
+      "cyan": 0.35,
+      "violet": 0.30,
+      "magenta": 0.10,
+      "amber": 0.25
+    }
+  },
+  {
+    "name": "the_storyteller",
+    "label": "The Storyteller",
+    "description": "Natural communicators who weave ideas into compelling narratives. They understand people deeply and use words, visuals, or media to inspire action. Storytellers excel at making complex ideas accessible and emotionally resonant.",
+    "emoji_icon": "\ud83d\udcdd",
+    "trait_ranges": {
+      "analytical_creative": [0.0, 0.4],
+      "builder_explorer": [0.3, 0.7],
+      "leader_specialist": [0.4, 0.8],
+      "entrepreneur_steward": [0.3, 0.7],
+      "people_systems": [0.0, 0.4]
+    },
+    "color_weights": {
+      "cyan": 0.10,
+      "violet": 0.15,
+      "magenta": 0.50,
+      "amber": 0.25
+    }
+  },
+  {
+    "name": "the_catalyst",
+    "label": "The Catalyst",
+    "description": "Energetic leaders who ignite change and rally people around a shared vision. They are action-oriented, persuasive, and thrive in dynamic environments. Catalysts turn ideas into movements and bring out the best in teams.",
+    "emoji_icon": "\u26a1",
+    "trait_ranges": {
+      "analytical_creative": [0.2, 0.6],
+      "builder_explorer": [0.4, 0.8],
+      "leader_specialist": [0.6, 1.0],
+      "entrepreneur_steward": [0.5, 0.9],
+      "people_systems": [0.0, 0.4]
+    },
+    "color_weights": {
+      "cyan": 0.15,
+      "violet": 0.10,
+      "magenta": 0.25,
+      "amber": 0.50
+    }
+  },
+  {
+    "name": "the_analyst",
+    "label": "The Analyst",
+    "description": "Sharp-minded thinkers who dive deep into data and patterns. They find clarity where others see noise and make decisions rooted in evidence. Analysts are the backbone of sound strategy, finding truth in numbers and logic.",
+    "emoji_icon": "\ud83d\udcca",
+    "trait_ranges": {
+      "analytical_creative": [0.7, 1.0],
+      "builder_explorer": [0.2, 0.6],
+      "leader_specialist": [0.1, 0.5],
+      "entrepreneur_steward": [0.2, 0.6],
+      "people_systems": [0.6, 1.0]
+    },
+    "color_weights": {
+      "cyan": 0.20,
+      "violet": 0.50,
+      "magenta": 0.05,
+      "amber": 0.25
+    }
+  },
+  {
+    "name": "the_explorer",
+    "label": "The Explorer",
+    "description": "Curious adventurers who crave novelty and new experiences. They ask \u201cwhat if?\u201d and push boundaries to discover uncharted territory. Explorers are restless learners who connect dots across diverse fields and perspectives.",
+    "emoji_icon": "\ud83e\udded",
+    "trait_ranges": {
+      "analytical_creative": [0.1, 0.5],
+      "builder_explorer": [0.0, 0.4],
+      "leader_specialist": [0.3, 0.7],
+      "entrepreneur_steward": [0.3, 0.7],
+      "people_systems": [0.2, 0.6]
+    },
+    "color_weights": {
+      "cyan": 0.50,
+      "violet": 0.15,
+      "magenta": 0.20,
+      "amber": 0.15
+    }
+  },
+  {
+    "name": "the_builder",
+    "label": "The Builder",
+    "description": "Hands-on creators who turn abstract ideas into tangible products. They are persistent, resourceful, and find deep satisfaction in shipping things that work. Builders focus on execution and craftsmanship over theory.",
+    "emoji_icon": "\ud83d\udee0\ufe0f",
+    "trait_ranges": {
+      "analytical_creative": [0.3, 0.7],
+      "builder_explorer": [0.7, 1.0],
+      "leader_specialist": [0.2, 0.6],
+      "entrepreneur_steward": [0.4, 0.8],
+      "people_systems": [0.4, 0.8]
+    },
+    "color_weights": {
+      "cyan": 0.25,
+      "violet": 0.25,
+      "magenta": 0.15,
+      "amber": 0.35
+    }
+  },
+  {
+    "name": "the_diplomat",
+    "label": "The Diplomat",
+    "description": "Empathetic bridge-builders who navigate complex social dynamics with grace. They resolve conflicts, build consensus, and create environments where everyone feels heard. Diplomats lead through influence rather than authority.",
+    "emoji_icon": "\ud83e\udd1d",
+    "trait_ranges": {
+      "analytical_creative": [0.2, 0.6],
+      "builder_explorer": [0.3, 0.7],
+      "leader_specialist": [0.5, 0.9],
+      "entrepreneur_steward": [0.1, 0.5],
+      "people_systems": [0.0, 0.3]
+    },
+    "color_weights": {
+      "cyan": 0.15,
+      "violet": 0.10,
+      "magenta": 0.40,
+      "amber": 0.35
+    }
+  },
+  {
+    "name": "the_innovator",
+    "label": "The Innovator",
+    "description": "Visionary thinkers who blend creativity with technical skill to invent new solutions. They challenge assumptions and reimagine how things could work. Innovators live at the intersection of imagination and feasibility.",
+    "emoji_icon": "\ud83d\udca1",
+    "trait_ranges": {
+      "analytical_creative": [0.1, 0.5],
+      "builder_explorer": [0.5, 0.9],
+      "leader_specialist": [0.3, 0.7],
+      "entrepreneur_steward": [0.5, 0.9],
+      "people_systems": [0.3, 0.7]
+    },
+    "color_weights": {
+      "cyan": 0.30,
+      "violet": 0.20,
+      "magenta": 0.30,
+      "amber": 0.20
+    }
+  }
+]

@@ -1,0 +1,142 @@
+[
+  {
+    "question_text": "When working on a school project, you prefer to...",
+    "option_a": "Research facts and data to build a strong foundation",
+    "option_b": "Brainstorm creative ideas and explore wild possibilities",
+    "trait_weights_a": {"analytical_creative": 0.8, "builder_explorer": 0.0, "leader_specialist": 0.0, "entrepreneur_steward": 0.0, "people_systems": 0.3},
+    "trait_weights_b": {"analytical_creative": -0.8, "builder_explorer": 0.0, "leader_specialist": 0.0, "entrepreneur_steward": 0.0, "people_systems": -0.3}
+  },
+  {
+    "question_text": "On a weekend, you would rather...",
+    "option_a": "Build or fix something with your hands",
+    "option_b": "Go on an unplanned adventure to a new place",
+    "trait_weights_a": {"analytical_creative": 0.1, "builder_explorer": 0.8, "leader_specialist": 0.0, "entrepreneur_steward": 0.1, "people_systems": 0.2},
+    "trait_weights_b": {"analytical_creative": -0.1, "builder_explorer": -0.8, "leader_specialist": 0.0, "entrepreneur_steward": -0.1, "people_systems": -0.2}
+  },
+  {
+    "question_text": "In a group activity, you naturally...",
+    "option_a": "Take charge and organize everyone",
+    "option_b": "Focus deeply on your own part and make it excellent",
+    "trait_weights_a": {"analytical_creative": 0.0, "builder_explorer": 0.0, "leader_specialist": 0.8, "entrepreneur_steward": 0.2, "people_systems": -0.3},
+    "trait_weights_b": {"analytical_creative": 0.0, "builder_explorer": 0.0, "leader_specialist": -0.8, "entrepreneur_steward": -0.2, "people_systems": 0.3}
+  },
+  {
+    "question_text": "If you got Rs 10,000 as a gift, you would...",
+    "option_a": "Invest it or start a small side hustle",
+    "option_b": "Save it carefully for something important later",
+    "trait_weights_a": {"analytical_creative": 0.0, "builder_explorer": 0.1, "leader_specialist": 0.1, "entrepreneur_steward": 0.8, "people_systems": 0.0},
+    "trait_weights_b": {"analytical_creative": 0.0, "builder_explorer": -0.1, "leader_specialist": -0.1, "entrepreneur_steward": -0.8, "people_systems": 0.0}
+  },
+  {
+    "question_text": "When solving a problem, you trust...",
+    "option_a": "Your instinct about what people need and feel",
+    "option_b": "A systematic process and clear framework",
+    "trait_weights_a": {"analytical_creative": -0.2, "builder_explorer": 0.0, "leader_specialist": 0.1, "entrepreneur_steward": 0.0, "people_systems": -0.8},
+    "trait_weights_b": {"analytical_creative": 0.2, "builder_explorer": 0.0, "leader_specialist": -0.1, "entrepreneur_steward": 0.0, "people_systems": 0.8}
+  },
+  {
+    "question_text": "You enjoy classes more when they involve...",
+    "option_a": "Logical puzzles, math problems, or structured analysis",
+    "option_b": "Drawing, storytelling, music, or open-ended projects",
+    "trait_weights_a": {"analytical_creative": 0.7, "builder_explorer": 0.1, "leader_specialist": 0.0, "entrepreneur_steward": 0.0, "people_systems": 0.4},
+    "trait_weights_b": {"analytical_creative": -0.7, "builder_explorer": -0.1, "leader_specialist": 0.0, "entrepreneur_steward": 0.0, "people_systems": -0.4}
+  },
+  {
+    "question_text": "When you imagine your future career, you see yourself...",
+    "option_a": "Creating something new that didn't exist before",
+    "option_b": "Discovering and understanding how things already work",
+    "trait_weights_a": {"analytical_creative": -0.3, "builder_explorer": 0.7, "leader_specialist": 0.0, "entrepreneur_steward": 0.3, "people_systems": 0.0},
+    "trait_weights_b": {"analytical_creative": 0.3, "builder_explorer": -0.7, "leader_specialist": 0.0, "entrepreneur_steward": -0.3, "people_systems": 0.0}
+  },
+  {
+    "question_text": "At a school fest, you would rather...",
+    "option_a": "Be the event head managing everything",
+    "option_b": "Be the star performer or subject expert on stage",
+    "trait_weights_a": {"analytical_creative": 0.0, "builder_explorer": 0.0, "leader_specialist": 0.7, "entrepreneur_steward": 0.3, "people_systems": -0.2},
+    "trait_weights_b": {"analytical_creative": 0.0, "builder_explorer": 0.0, "leader_specialist": -0.7, "entrepreneur_steward": -0.3, "people_systems": 0.2}
+  },
+  {
+    "question_text": "When faced with a risky opportunity, you...",
+    "option_a": "Jump in — high risk means high reward",
+    "option_b": "Pause, plan, and proceed carefully",
+    "trait_weights_a": {"analytical_creative": -0.1, "builder_explorer": -0.2, "leader_specialist": 0.2, "entrepreneur_steward": 0.7, "people_systems": -0.1},
+    "trait_weights_b": {"analytical_creative": 0.1, "builder_explorer": 0.2, "leader_specialist": -0.2, "entrepreneur_steward": -0.7, "people_systems": 0.1}
+  },
+  {
+    "question_text": "You would rather help a friend by...",
+    "option_a": "Listening and giving emotional support",
+    "option_b": "Making a step-by-step plan to fix their problem",
+    "trait_weights_a": {"analytical_creative": -0.2, "builder_explorer": 0.0, "leader_specialist": 0.0, "entrepreneur_steward": 0.0, "people_systems": -0.7},
+    "trait_weights_b": {"analytical_creative": 0.2, "builder_explorer": 0.0, "leader_specialist": 0.0, "entrepreneur_steward": 0.0, "people_systems": 0.7}
+  },
+  {
+    "question_text": "When you read the news, you are drawn to...",
+    "option_a": "Scientific breakthroughs and technology updates",
+    "option_b": "Stories about art, culture, and human experiences",
+    "trait_weights_a": {"analytical_creative": 0.6, "builder_explorer": 0.0, "leader_specialist": 0.0, "entrepreneur_steward": 0.0, "people_systems": 0.3},
+    "trait_weights_b": {"analytical_creative": -0.6, "builder_explorer": 0.0, "leader_specialist": 0.0, "entrepreneur_steward": 0.0, "people_systems": -0.3}
+  },
+  {
+    "question_text": "Your ideal summer project would be...",
+    "option_a": "Building a robot, app, or gadget from scratch",
+    "option_b": "Travelling to 5 new cities and documenting the journey",
+    "trait_weights_a": {"analytical_creative": 0.2, "builder_explorer": 0.7, "leader_specialist": 0.0, "entrepreneur_steward": 0.1, "people_systems": 0.3},
+    "trait_weights_b": {"analytical_creative": -0.2, "builder_explorer": -0.7, "leader_specialist": 0.0, "entrepreneur_steward": -0.1, "people_systems": -0.3}
+  },
+  {
+    "question_text": "When there is a class debate, you prefer to...",
+    "option_a": "Moderate the debate and keep things fair",
+    "option_b": "Argue passionately for your side with deep research",
+    "trait_weights_a": {"analytical_creative": 0.0, "builder_explorer": 0.0, "leader_specialist": 0.6, "entrepreneur_steward": 0.0, "people_systems": -0.4},
+    "trait_weights_b": {"analytical_creative": 0.0, "builder_explorer": 0.0, "leader_specialist": -0.6, "entrepreneur_steward": 0.0, "people_systems": 0.4}
+  },
+  {
+    "question_text": "You find it more exciting to...",
+    "option_a": "Start your own YouTube channel or business",
+    "option_b": "Get a stable, high-paying job at a top company",
+    "trait_weights_a": {"analytical_creative": -0.1, "builder_explorer": 0.0, "leader_specialist": 0.1, "entrepreneur_steward": 0.7, "people_systems": 0.0},
+    "trait_weights_b": {"analytical_creative": 0.1, "builder_explorer": 0.0, "leader_specialist": -0.1, "entrepreneur_steward": -0.7, "people_systems": 0.0}
+  },
+  {
+    "question_text": "When making a big decision, you rely more on...",
+    "option_a": "How you and others feel about it",
+    "option_b": "Pros-and-cons lists and logical analysis",
+    "trait_weights_a": {"analytical_creative": -0.3, "builder_explorer": 0.0, "leader_specialist": 0.0, "entrepreneur_steward": 0.0, "people_systems": -0.7},
+    "trait_weights_b": {"analytical_creative": 0.3, "builder_explorer": 0.0, "leader_specialist": 0.0, "entrepreneur_steward": 0.0, "people_systems": 0.7}
+  },
+  {
+    "question_text": "You would rather be known as someone who...",
+    "option_a": "Thinks deeply and finds precise answers",
+    "option_b": "Thinks differently and comes up with surprising ideas",
+    "trait_weights_a": {"analytical_creative": 0.7, "builder_explorer": 0.0, "leader_specialist": -0.1, "entrepreneur_steward": 0.0, "people_systems": 0.2},
+    "trait_weights_b": {"analytical_creative": -0.7, "builder_explorer": 0.0, "leader_specialist": 0.1, "entrepreneur_steward": 0.0, "people_systems": -0.2}
+  },
+  {
+    "question_text": "If you could master one skill instantly, it would be...",
+    "option_a": "Carpentry, coding, or engineering — making things",
+    "option_b": "Photography, travel writing, or anthropology — understanding the world",
+    "trait_weights_a": {"analytical_creative": 0.1, "builder_explorer": 0.7, "leader_specialist": 0.0, "entrepreneur_steward": 0.0, "people_systems": 0.2},
+    "trait_weights_b": {"analytical_creative": -0.1, "builder_explorer": -0.7, "leader_specialist": 0.0, "entrepreneur_steward": 0.0, "people_systems": -0.2}
+  },
+  {
+    "question_text": "Your dream team role would be...",
+    "option_a": "The captain who sets the strategy and motivates the team",
+    "option_b": "The MVP whose individual brilliance wins the game",
+    "trait_weights_a": {"analytical_creative": 0.0, "builder_explorer": 0.0, "leader_specialist": 0.7, "entrepreneur_steward": 0.1, "people_systems": -0.3},
+    "trait_weights_b": {"analytical_creative": 0.0, "builder_explorer": 0.0, "leader_specialist": -0.7, "entrepreneur_steward": -0.1, "people_systems": 0.3}
+  },
+  {
+    "question_text": "You admire people who...",
+    "option_a": "Built something from nothing — like startup founders",
+    "option_b": "Dedicated their life to mastering a craft — like scientists or artists",
+    "trait_weights_a": {"analytical_creative": 0.0, "builder_explorer": 0.1, "leader_specialist": 0.2, "entrepreneur_steward": 0.7, "people_systems": -0.1},
+    "trait_weights_b": {"analytical_creative": 0.0, "builder_explorer": -0.1, "leader_specialist": -0.2, "entrepreneur_steward": -0.7, "people_systems": 0.1}
+  },
+  {
+    "question_text": "When there is a conflict between friends, you...",
+    "option_a": "Mediate and try to understand both sides emotionally",
+    "option_b": "Analyze the situation objectively and suggest a fair solution",
+    "trait_weights_a": {"analytical_creative": -0.1, "builder_explorer": 0.0, "leader_specialist": 0.1, "entrepreneur_steward": 0.0, "people_systems": -0.8},
+    "trait_weights_b": {"analytical_creative": 0.1, "builder_explorer": 0.0, "leader_specialist": -0.1, "entrepreneur_steward": 0.0, "people_systems": 0.8}
+  }
+]
