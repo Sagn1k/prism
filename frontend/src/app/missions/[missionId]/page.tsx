@@ -4,9 +4,11 @@ import { useEffect, useState } from "react";
 import { useParams, useRouter } from "next/navigation";
 import { motion } from "framer-motion";
 import Link from "next/link";
-import { worldsApi, type Mission, type MissionResult } from "@/lib/api";
+import { AnimatePresence } from "framer-motion";
+import { worldsApi, cardApi, type Mission, type MissionResult, type PrismCardData } from "@/lib/api";
 import { useAuth } from "@/hooks/useAuth";
 import LoginModal from "@/components/LoginModal";
+import PrismCard from "@/components/PrismCard";
 
 const TYPE_META: Record<string, { icon: string; label: string }> = {
   flash: { icon: "⚡", label: "Quick Fire" },
@@ -31,6 +33,9 @@ export default function MissionPage() {
   const [elapsed, setElapsed] = useState(0);
   const [error, setError] = useState("");
   const [showLogin, setShowLogin] = useState(false);
+  const [worldComplete, setWorldComplete] = useState(false);
+  const [generatedCard, setGeneratedCard] = useState<PrismCardData | null>(null);
+  const [showCardPopup, setShowCardPopup] = useState(false);
 
   // Timer
   useEffect(() => {
@@ -41,10 +46,11 @@ export default function MissionPage() {
     return () => clearInterval(interval);
   }, [mission, result, startTime]);
 
-  // Wait for auth, then start mission
+  // Wait for auth, then start mission — only re-run if user identity changes, not on XP/level updates
+  const userId = user?.id;
   useEffect(() => {
     if (authLoading || !missionId) return;
-    if (!user) {
+    if (!userId) {
       setMissionLoading(false);
       setShowLogin(true);
       return;
@@ -72,7 +78,7 @@ export default function MissionPage() {
         }
       })
       .finally(() => setMissionLoading(false));
-  }, [missionId, user, authLoading]);
+  }, [missionId, userId, authLoading]);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -87,6 +93,29 @@ export default function MissionPage() {
       });
       setResult(res.data);
       hydrate();
+
+      // Check if all missions in this world are now completed
+      if (mission?.world_id) {
+        try {
+          const worldMissions = await worldsApi.missions(mission.world_id);
+          const allDone = worldMissions.data.every((m: Mission) => m.completed || m.id === missionId);
+          if (allDone) {
+            setWorldComplete(true);
+            // Auto-generate a fresh Prism Card
+            try {
+              await cardApi.generate();
+              const cards = await cardApi.mine();
+              if (cards.data.length > 0) {
+                setGeneratedCard(cards.data[0]);
+              }
+            } catch {
+              // Card generation failed silently — don't block the result screen
+            }
+          }
+        } catch {
+          // World check failed silently
+        }
+      }
     } catch (err: unknown) {
       const msg =
         err && typeof err === "object" && "response" in err
@@ -267,10 +296,95 @@ export default function MissionPage() {
             </div>
           )}
 
-          <button onClick={() => router.back()} className="btn-primary w-full">
-            Continue 🎮
+          {/* World complete celebration */}
+          {worldComplete && (
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 1.5, type: "spring" }}
+              className="border-t-2 border-prism-border pt-5 mb-6"
+            >
+              <div className="flex items-center justify-center gap-2 mb-2">
+                <motion.span
+                  animate={{ rotate: [0, -15, 15, 0], scale: [1, 1.2, 1] }}
+                  transition={{ duration: 1.5, repeat: Infinity }}
+                  className="text-3xl"
+                >
+                  🏆
+                </motion.span>
+              </div>
+              <p className="text-lg font-extrabold text-gradient mb-1">World Complete!</p>
+              <p className="text-xs text-prism-text-secondary mb-4">
+                You&apos;ve conquered every quest! Your Prism Card has been updated.
+              </p>
+              {generatedCard && (
+                <button
+                  onClick={() => setShowCardPopup(true)}
+                  className="btn-primary w-full mb-3"
+                >
+                  View Your Prism Card 🃏
+                </button>
+              )}
+            </motion.div>
+          )}
+
+          <button onClick={() => router.back()} className={`w-full ${worldComplete ? "btn-secondary" : "btn-primary"}`}>
+            {worldComplete ? "Back to Quests" : "Continue 🎮"}
           </button>
         </motion.div>
+
+        {/* Prism Card popup */}
+        <AnimatePresence>
+          {showCardPopup && generatedCard && (
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              className="fixed inset-0 z-[100] flex items-center justify-center bg-black/40 backdrop-blur-sm px-4"
+              onClick={() => setShowCardPopup(false)}
+            >
+              <motion.div
+                initial={{ scale: 0.7, y: 40 }}
+                animate={{ scale: 1, y: 0 }}
+                exit={{ scale: 0.7, y: 40 }}
+                transition={{ type: "spring", stiffness: 250, damping: 22 }}
+                className="relative max-w-sm w-full"
+                onClick={(e) => e.stopPropagation()}
+              >
+                {/* Floating celebration emojis */}
+                <div className="absolute -top-8 left-1/2 -translate-x-1/2 flex gap-3">
+                  {["🎉", "⭐", "🎉"].map((e, i) => (
+                    <motion.span
+                      key={i}
+                      className="text-2xl"
+                      animate={{ y: [0, -10, 0], rotate: [0, i % 2 === 0 ? 15 : -15, 0] }}
+                      transition={{ duration: 1.5, repeat: Infinity, delay: i * 0.2 }}
+                    >
+                      {e}
+                    </motion.span>
+                  ))}
+                </div>
+
+                <PrismCard card={generatedCard} />
+
+                <div className="flex gap-3 mt-5">
+                  <button
+                    onClick={() => router.push("/profile")}
+                    className="btn-primary flex-1"
+                  >
+                    My Profile
+                  </button>
+                  <button
+                    onClick={() => setShowCardPopup(false)}
+                    className="btn-secondary flex-1"
+                  >
+                    Close
+                  </button>
+                </div>
+              </motion.div>
+            </motion.div>
+          )}
+        </AnimatePresence>
       </div>
     );
   }

@@ -13,7 +13,19 @@ export default function CardPageClient({ token }: { token: string }) {
   useEffect(() => {
     cardApi
       .byToken(token)
-      .then((r) => setCard(r.data))
+      .then((r) => {
+        // Public endpoint returns {card_data, image_url, og_title, og_description}
+        // Normalize it to PrismCardData shape for the PrismCard component
+        const data = r.data as Record<string, unknown>;
+        setCard({
+          id: token,
+          card_data: (data.card_data || data) as Record<string, unknown>,
+          image_url: (data.image_url as string) || null,
+          share_token: token,
+          is_public: true,
+          generated_at: new Date().toISOString(),
+        });
+      })
       .catch(() => setError(true));
   }, [token]);
 

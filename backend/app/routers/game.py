@@ -14,6 +14,7 @@ from sqlalchemy.orm import selectinload
 from app.database import get_db
 from app.dependencies import get_current_user, get_optional_user
 from app.models.game import (
+    AttemptStatus,
     DailyQuest,
     Mission,
     MissionAttempt,
@@ -30,6 +31,8 @@ from app.schemas.game import (
     MissionSubmitRequest,
     TotSubmitRequest,
     WorldResponse,
+    WorldSwipeRequest,
+    WorldSwipeResponse,
 )
 from app.services.identity_engine import process_mission_signals, DIMENSIONS
 
@@ -94,6 +97,51 @@ async def list_worlds(
         )
         for world, mission_count in rows
     ]
+
+
+# World slug -> trait dimension signals for right-swipe (interest).
+# Left-swipe sends the negation of these signals.
+WORLD_TRAIT_MAP: dict[str, dict[str, float]] = {
+    "space-lab": {"builder_explorer": 0.4, "analytical_creative": -0.2},
+    "creator-studio": {"analytical_creative": 0.5, "people_systems": 0.15},
+    "code-dungeon": {"analytical_creative": -0.5, "builder_explorer": -0.2},
+    "market-arena": {"entrepreneur_steward": 0.5, "leader_specialist": 0.3},
+}
+
+
+@router.post("/worlds/{world_id}/swipe", response_model=WorldSwipeResponse)
+async def swipe_world(
+    world_id: uuid.UUID,
+    body: WorldSwipeRequest,
+    db: Annotated[AsyncSession, Depends(get_db)],
+    current_user: Annotated[User, Depends(get_current_user)],
+):
+    """Record a world swipe as a soft identity signal."""
+    if body.direction not in ("left", "right"):
+        raise HTTPException(
+            status_code=status.HTTP_422_UNPROCESSABLE_ENTITY,
+            detail="direction must be 'left' or 'right'",
+        )
+
+    world = (
+        await db.execute(select(World).where(World.id == world_id))
+    ).scalar_one_or_none()
+    if world is None:
+        raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail="World not found")
+
+    trait_signals = WORLD_TRAIT_MAP.get(world.slug, {})
+    if trait_signals:
+        # Right swipe = interested -> positive signal; left = negate
+        multiplier = 1.0 if body.direction == "right" else -1.0
+        # Low weight since this is an implicit/soft signal
+        soft_signals = {dim: val * multiplier * 0.3 for dim, val in trait_signals.items()}
+
+        from app.services.identity_engine import process_signal, recalculate_spectrum
+
+        await process_signal(db, current_user.id, soft_signals, source=f"world_swipe:{world.slug}")
+        await recalculate_spectrum(db, current_user.id)
+
+    return WorldSwipeResponse(ok=True, world_id=world_id, direction=body.direction)
 
 
 @router.get("/worlds/{world_id}/missions", response_model=list[MissionResponse])
@@ -175,14 +223,14 @@ async def start_mission(
             detail="Mission already completed",
         )
 
-    # Check for an existing in-progress attempt
+    # Check for an existing in-progress attempt (limit 1 to handle race conditions from double-mounts)
     existing = (
         await db.execute(
             select(MissionAttempt).where(
                 MissionAttempt.user_id == current_user.id,
                 MissionAttempt.mission_id == mission_id,
                 MissionAttempt.completed_at.is_(None),
-            )
+            ).order_by(MissionAttempt.started_at.desc()).limit(1)
         )
     ).scalar_one_or_none()
 
@@ -216,14 +264,14 @@ async def submit_mission(
     current_user: Annotated[User, Depends(get_current_user)],
 ):
     """Score a mission attempt, award XP, and trigger identity engine."""
-    # Find open attempt
+    # Find open attempt (use limit 1 to handle duplicate rows from race conditions)
     attempt = (
         await db.execute(
             select(MissionAttempt).where(
                 MissionAttempt.user_id == current_user.id,
                 MissionAttempt.mission_id == mission_id,
                 MissionAttempt.completed_at.is_(None),
-            ).order_by(MissionAttempt.started_at.desc())
+            ).order_by(MissionAttempt.started_at.desc()).limit(1)
         )
     ).scalar_one_or_none()
 
@@ -252,6 +300,7 @@ async def submit_mission(
     attempt.speed_score = speed_score
     attempt.accuracy_score = accuracy_score
     attempt.time_spent_sec = body.time_spent
+    attempt.status = AttemptStatus.completed
     attempt.completed_at = datetime.now(timezone.utc)
 
     # Award XP to user

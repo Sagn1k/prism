@@ -68,6 +68,16 @@ class TotSubmitRequest(BaseModel):
     responses: list[TotResponseItem]
 
 
+class WorldSwipeRequest(BaseModel):
+    direction: str  # "right" (interested) or "left" (skip)
+
+
+class WorldSwipeResponse(BaseModel):
+    ok: bool
+    world_id: UUID
+    direction: str
+
+
 class DailyQuestResponse(BaseModel):
     model_config = ConfigDict(from_attributes=True)
 

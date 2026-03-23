@@ -20,8 +20,13 @@ api.interceptors.response.use(
   (r) => r,
   (err) => {
     if (err.response?.status === 401 && typeof window !== "undefined") {
-      localStorage.removeItem("prism_token");
-      window.location.href = "/";
+      // Don't redirect on auth endpoints — let the login/register form show the error
+      const url = err.config?.url || "";
+      const isAuthEndpoint = url.includes("/auth/login") || url.includes("/auth/register") || url.includes("/auth/otp");
+      if (!isAuthEndpoint) {
+        localStorage.removeItem("prism_token");
+        window.location.href = "/";
+      }
     }
     return Promise.reject(err);
   }
@@ -138,6 +143,8 @@ export interface MissionResult {
 
 export const worldsApi = {
   list: () => api.get<World[]>("/game/worlds"),
+  swipe: (worldId: string, direction: "left" | "right") =>
+    api.post(`/game/worlds/${worldId}/swipe`, { direction }),
   missions: (worldId: string) =>
     api.get<Mission[]>(`/game/worlds/${worldId}/missions`),
   startMission: (missionId: string) =>

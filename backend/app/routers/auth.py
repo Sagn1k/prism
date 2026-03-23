@@ -219,13 +219,13 @@ async def login(
     if user is None or not user.password_hash:
         raise HTTPException(
             status_code=status.HTTP_401_UNAUTHORIZED,
-            detail="Invalid email or password",
+            detail="No account found with this email. Please sign up first.",
         )
 
     if not bcrypt.verify(body.password, user.password_hash):
         raise HTTPException(
             status_code=status.HTTP_401_UNAUTHORIZED,
-            detail="Invalid email or password",
+            detail="Incorrect password. Please try again.",
         )
 
     if not user.is_active:
